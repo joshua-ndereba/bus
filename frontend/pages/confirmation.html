@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/confirmation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (Same as Previous Pages) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="Bus Ticketing Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="search.html">Search Buses</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Confirmation Section -->
+  <section class="confirmation-container">
+    <h2>Booking Confirmation</h2>
+    <div class="confirmation-details">
+      <p><strong>Booking ID:</strong> <span id="bookingId"></span></p>
+      <p><strong>Bus Name:</strong> <span id="busName"></span></p>
+      <p><strong>Route:</strong> <span id="busRoute"></span></p>
+      <p><strong>Departure:</strong> <span id="departureTime"></span></p>
+      <p><strong>Passengers:</strong></p>
+      <ul id="passengerList"></ul>
+      <p><strong>Total Price:</strong> ₹<span id="totalPrice"></span></p>
+    </div>
+    <button id="downloadTicket">Download Ticket</button>
+  </section>
+
+  <!-- Footer (Same as Previous Pages) -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Bus Ticketing System. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/confirmation.js"></script>
+</body>
+</html>

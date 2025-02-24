@@ -84,3 +84,15 @@ const buses = [
   function bookBus(busId) {
     window.location.href = `booking.html?busId=${busId}`;
   }
+//functions for loading spinnner
+  function showLoading() {
+    document.getElementById('loadingSpinner').style.display = 'flex';
+  }
+  
+  function hideLoading() {
+    document.getElementById('loadingSpinner').style.display = 'none';
+  }
+  
+  // Example usage
+  showLoading();
+  setTimeout(hideLoading, 2000); // Simulate a 2-second delay
