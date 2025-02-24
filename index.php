@@ -1,3 +1,12 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $from = $_POST['from'];
+  $to = $_POST['to'];
+  $date = $_POST['date'];
+  header("Location: pages/search.php?from=$from&to=$to&date=$date");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,39 +18,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <nav>
       <div class="logo">
         <img src="assets/images/logo.png" alt="Bus Ticketing Logo">
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/search.html">Search Buses</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="pages/search.php">Search Buses</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Login</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Book Your Bus Tickets Online</h1>
       <p>Travel to your favorite destinations with ease and comfort.</p>
-      <form id="searchForm">
-        <input type="text" placeholder="From" required>
-        <input type="text" placeholder="To" required>
-        <input type="date" placeholder="Date" required>
+      <form method="POST" action="index.php">
+        <input type="text" name="from" placeholder="From" required>
+        <input type="text" name="to" placeholder="To" required>
+        <input type="date" name="date" placeholder="Date" required>
         <button type="submit">Search Buses <i class="fas fa-search"></i></button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <p>&copy; 2025 group 1 work </p>
+      <p>&copy; 2023 Bus Ticketing System. All rights reserved.</p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
