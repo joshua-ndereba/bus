@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Buses</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (Same as Homepage) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="Bus Ticketing Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="search.html">Search Buses</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Filters -->
+  <section class="search-filters">
+    <div class="filters-container">
+      <h2>Filter Results</h2>
+      <div class="filter-group">
+        <label>Price Range:</label>
+        <select id="priceFilter">
+          <option value="all">All</option>
+          <option value="0-500">₹0 - ₹500</option>
+          <option value="500-1000">₹500 - ₹1000</option>
+          <option value="1000-2000">₹1000 - ₹2000</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Departure Time:</label>
+        <select id="timeFilter">
+          <option value="all">All</option>
+          <option value="morning">Morning (6 AM - 12 PM)</option>
+          <option value="afternoon">Afternoon (12 PM - 6 PM)</option>
+          <option value="night">Night (6 PM - 12 AM)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bus Listings -->
+  <section class="bus-listings">
+    <div class="bus-list-container" id="busList">
+      <!-- Bus cards will be dynamically added here via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer (Same as Homepage) -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Bus Ticketing System. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/search.js"></script>
+</body>
+</html>

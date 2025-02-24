@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Bus</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (Same as Previous Pages) -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="Bus Ticketing Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="search.html">Search Buses</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking Container -->
+  <section class="booking-container">
+    <!-- Bus Details -->
+    <div class="bus-details">
+      <h2 id="busName">Luxury Bus</h2>
+      <p><i class="fas fa-clock"></i> Departure: <span id="departureTime">10:00 AM</span></p>
+      <p><i class="fas fa-map-marker-alt"></i> <span id="busRoute">Mumbai to Pune</span></p>
+    </div>
+
+    <!-- Seat Map -->
+    <div class="seat-map">
+      <h3>Select Seats</h3>
+      <div class="seat-grid" id="seatGrid">
+        <!-- Seats will be dynamically generated here -->
+      </div>
+    </div>
+
+    <!-- Passenger Details -->
+    <div class="passenger-form">
+      <h3>Passenger Details</h3>
+      <form id="passengerForm">
+        <!-- Passenger fields will be dynamically added here -->
+      </form>
+    </div>
+
+    <!-- Booking Summary -->
+    <div class="booking-summary">
+      <h3>Booking Summary</h3>
+      <div class="summary-details">
+        <p>Selected Seats: <span id="selectedSeats">0</span></p>
+        <p>Total Price: ₹<span id="totalPrice">0</span></p>
+        <button onclick="confirmBooking()">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Same as Previous Pages) -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Bus Ticketing System. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/booking.js"></script>
+</body>
+</html>
